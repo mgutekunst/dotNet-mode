@@ -1,0 +1,8 @@
+* dotNet-mode
+  This is a minor mode that provides some convenience functions to edit and
+  build .NET projects and solutions.
+** Functions
+*** dnt/run-Mstest
+    Prompts for an .dll file and runs all tests insido that using MSTest.exe.
+    For this function to execute MSTest.exe, it must reside either be in Emacs
+    =exec-path= or =dnt/Mstest-executable-path= must point to it
