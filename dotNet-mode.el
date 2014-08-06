@@ -59,7 +59,7 @@
     (setq dnt/Mstest-executable-path (executable-find "Mstest")))
   (if (string= (file-name-extension path) "dll")
 ;; use let or progn here, restore compile-path afterwards
-      (compilation-start (concat (shell-quote-argument dnt/Mstest-executable-path) " /testcontainer:"(shell-quote-argument path) " /detail:errormessage"))
+      (compilation-start (concat (shell-quote-argument dnt/Mstest-executable-path) " /testcontainer:"(shell-quote-argument path) " /detail:link /detail:errormessage"))
     (error "%s is not leading to a valid .dll file" path)))
 
 
@@ -68,8 +68,6 @@
 ;;;;  User Options, Variables
 ;;;;##########################################################################
 
-
-
-
+(provide 'dotNet-mode)
 
 ;;; dotNet-mode.el ends here
